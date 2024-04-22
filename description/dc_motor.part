@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "b3d8a7e925754b2a58603c16",
+    "documentMicroversion": "46e5239c6acdbdd83a9ce7d6",
+    "elementId": "2858e5558c5b3d3070c7f12e",
+    "fullConfiguration": "default",
+    "id": "MAjHiia/4jvsSTCXe",
+    "isStandardContent": false,
+    "name": "dc_motor <1>",
+    "partId": "KFXB",
+    "suppressed": false,
+    "type": "Part"
+}

@@ -1,0 +1,840 @@
+<robot name="OfficeMate">
+<link name="base">
+<visual>
+<origin xyz="-0.058000000000000030698 -0.065000000000000043854 0.0080000000000000001665" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/nucleo-f411re_with_shield-mdd10.stl"/>
+</geometry>
+<material name="nucleo-f411re_with_shield-mdd10_material">
+<color rgba="0.90196078431372550543 0.90196078431372550543 0.90196078431372550543 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.058000000000000030698 -0.065000000000000043854 0.0080000000000000001665" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/nucleo-f411re_with_shield-mdd10.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.19305130036318296494 -0.054679223551488964628 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.19305130036318296494 -0.054679223551488964628 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-2.3540739670091515023e-17 0.00060508128685702125289 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/base.stl"/>
+</geometry>
+<material name="base_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-2.3540739670091515023e-17 0.00060508128685702125289 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/base.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.0073660000000000044884 0.16060508128685702101 -0.0040829999999999998239" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ballcaster_distance.stl"/>
+</geometry>
+<material name="ballcaster_distance_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0073660000000000044884 0.16060508128685702101 -0.0040829999999999998239" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ballcaster_distance.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.33811055549707641488 -0.13842922355148895575 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.33811055549707641488 -0.13842922355148895575 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.33811055549707641488 -0.305929223551489049 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.33811055549707641488 -0.305929223551489049 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.067500000000000018319 -0.075952768779387322406 0.0080000000000000001665" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/battery_pack_2p2s.stl"/>
+</geometry>
+<material name="battery_pack_2p2s_material">
+<color rgba="0.37254901960784314596 0.65490196078431373028 0.23921568627450981448 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.067500000000000018319 -0.075952768779387322406 0.0080000000000000001665" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/battery_pack_2p2s.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.0073660000000000044884 -0.15939491871314293014 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ballcaster_distance.stl"/>
+</geometry>
+<material name="ballcaster_distance_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0073660000000000044884 -0.15939491871314293014 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ballcaster_distance.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="3.8163916471489756077e-17 -0.14840058650039017474 0.069718999913388229883" rpy="-0.34906585039886522948 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/lcd_holder.stl"/>
+</geometry>
+<material name="lcd_holder_material">
+<color rgba="0.2313725490196078538 0.38039215686274507888 0.7058823529411765163 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="3.8163916471489756077e-17 -0.14840058650039017474 0.069718999913388229883" rpy="-0.34906585039886522948 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/lcd_holder.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.0057938752055168157851 0.026777668702602386991 0.0060553509399131535268" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/d36v50fx-step-down-voltage-regulator.stl"/>
+</geometry>
+<material name="d36v50fx-step-down-voltage-regulator_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0057938752055168157851 0.026777668702602386991 0.0060553509399131535268" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/d36v50fx-step-down-voltage-regulator.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="4.1633363423443370266e-17 -0.14877646354870460721 0.069855807970718525324" rpy="-0.34906585039886678379 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/1118.stl"/>
+</geometry>
+<material name="1118_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="4.1633363423443370266e-17 -0.14877646354870460721 0.069855807970718525324" rpy="-0.34906585039886678379 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/1118.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.047992045229289514996 -0.13842922355148895575 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.047992045229289514996 -0.13842922355148895575 -0.018000000000000022926" rpy="1.2246467991473500024e-16 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0027246316639243026159 -0.051327075838684434184 0.025363890932312806864" rpy="0 0 0"/>
+<mass value="1.8036258272218326226" />
+<inertia ixx="0.017152316646292291302" ixy="0.00018065707213044202907"  ixz="-7.4138677728396813944e-05" iyy="0.01181840790159098889" iyz="0.0026963031358970589516" izz="0.025498019240910857475" />
+</inertial>
+</link>
+
+<link name="ball_caster">
+<visual>
+<origin xyz="0.0073660000000000001516 0 -0.0020955000000000001403" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ball_caster.stl"/>
+</geometry>
+<material name="ball_caster_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0073660000000000001516 0 -0.0020955000000000001403" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ball_caster.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0073655046575237647505 -1.9835572058669262912e-07 -0.0056150993913816008712" rpy="0 0 0"/>
+<mass value="0.0049895160479999992043" />
+<inertia ixx="1.2629713113281908865e-07" ixy="5.1435610177033656335e-12"  ixz="4.466551106969827492e-12" iyy="1.2096252512157598233e-07" iyz="2.1159407610626589839e-12" izz="1.3706971477299090287e-07" />
+</inertial>
+</link>
+
+<joint name="link_front_ball" type="fixed">
+<origin xyz="-0.0073660000000000027537 -0.15939491871314293014 -0.0040829999999999998239" rpy="0 -0 0" />
+<parent link="base" />
+<child link="ball_caster" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="ball_caster_2">
+<visual>
+<origin xyz="0.0073660000000000001516 0 -0.0020955000000000001403" rpy="3.141592653589793116 -1.5408542917559201943e-46 -1.2151436667971120496e-46" />
+<geometry>
+<mesh filename="package://office_mate/description/ball_caster.stl"/>
+</geometry>
+<material name="ball_caster_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0073660000000000001516 0 -0.0020955000000000001403" rpy="3.141592653589793116 -1.5408542917559201943e-46 -1.2151436667971120496e-46" />
+<geometry>
+<mesh filename="package://office_mate/description/ball_caster.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0073655046575237647505 -1.9835572058669262912e-07 -0.0056150993913816008712" rpy="0 0 0"/>
+<mass value="0.0049895160479999992043" />
+<inertia ixx="1.2629713113281908865e-07" ixy="5.1435610177033656335e-12"  ixz="4.466551106969827492e-12" iyy="1.2096252512157598233e-07" iyz="2.1159407610626589839e-12" izz="1.3706971477299090287e-07" />
+</inertial>
+</link>
+
+<joint name="link_back_ball" type="fixed">
+<origin xyz="-0.0073660000000000027537 0.16060508128685702101 -0.0040829999999999989566" rpy="-4.1633363423443138538e-16 2.3954968440554611406e-30 -7.888609052210095283e-31" />
+<parent link="base" />
+<child link="ball_caster_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="motor_bracket">
+<visual>
+<origin xyz="0.0010000000000006368812 -0.0081499999999992966959 -0.013500000000000003317" rpy="-1.570796326794896558 3.4914813388431353274e-15 0" />
+<geometry>
+<mesh filename="package://office_mate/description/motor_bracket.stl"/>
+</geometry>
+<material name="motor_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0010000000000006368812 -0.0081499999999992966959 -0.013500000000000003317" rpy="-1.570796326794896558 3.4914813388431353274e-15 0" />
+<geometry>
+<mesh filename="package://office_mate/description/motor_bracket.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-4.0713796376115173742e-06 -0.012177121574431949008 -0.0047261629959588959821" rpy="0 0 0"/>
+<mass value="0.0084630469105596139306" />
+<inertia ixx="2.8927942991819255597e-06" ixy="6.3752981952633879778e-10"  ixz="-1.2458808671189735512e-10" iyy="7.9629434849240485761e-07" iyz="5.5267826027688928448e-07" izz="2.9001914023676713086e-06" />
+</inertial>
+</link>
+
+<link name="dc_motor">
+<visual>
+<origin xyz="-1.084202172485504434e-19 0.0085000000000099995567 -9.9920072216264088638e-15" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/dc_motor.stl"/>
+</geometry>
+<material name="dc_motor_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-1.084202172485504434e-19 0.0085000000000099995567 -9.9920072216264088638e-15" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/dc_motor.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="1.1702285396423018978e-05 0.0084346555184144807182 -0.027179996226653398844" rpy="0 0 0"/>
+<mass value="0.096000000000000015876" />
+<inertia ixx="3.1172642216988409689e-05" ixy="2.0079069750654133337e-08"  ixz="3.1478378843400612317e-08" iyy="3.1065300521791501672e-05" iyz="-1.8154048411485931386e-07" izz="7.041773449468090525e-06" />
+</inertial>
+</link>
+
+<link name="wheel">
+<visual>
+<origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/wheel.stl"/>
+</geometry>
+<material name="wheel_material">
+<color rgba="0.50196078431372548323 0.50196078431372548323 0.50196078431372548323 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/wheel.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="7.9659079677543483088e-07 3.0513857657863314151e-08 -0.0025284034607947767151" rpy="0 0 0"/>
+<mass value="0.014968548144000006286" />
+<inertia ixx="8.6077439441117286581e-06" ixy="-2.3149305744626941308e-12"  ixz="1.0674848956514447684e-11" iyy="8.6048259472699125219e-06" iyz="-1.1376260598392653348e-12" izz="1.7005905067567777145e-05" />
+</inertial>
+</link>
+
+<joint name="right_wheel" type="continuous">
+<origin xyz="-1.084202172485504434e-19 0.0085000000000099995567 0.015000000000000013323" rpy="-3.4914813388431353274e-15 1.2190441939489852094e-29 -1.570796326794896558" />
+<parent link="dc_motor" />
+<child link="wheel" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_right_motor" type="fixed">
+<origin xyz="-1.2359904766334750548e-17 0.0043499999999999927613 -0.022999999999999999611" rpy="1.570796326794896558 -3.4914813388431353274e-15 3.1415926535897895633" />
+<parent link="motor_bracket" />
+<child link="dc_motor" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_right_bracket" type="fixed">
+<origin xyz="-0.15360000000000004206 0.00060508128685702472233 0.0080000000000000019013" rpy="3.141592653589793116 5.1885812976927455838e-73 -1.570796326794896558" />
+<parent link="base" />
+<child link="motor_bracket" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="motor_bracket_2">
+<visual>
+<origin xyz="0.0010000000000006368812 -0.0081499999999992966959 -0.013500000000000003317" rpy="-1.570796326794896558 3.4914813388431353274e-15 6.6217083938053274108e-105" />
+<geometry>
+<mesh filename="package://office_mate/description/motor_bracket.stl"/>
+</geometry>
+<material name="motor_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0010000000000006368812 -0.0081499999999992966959 -0.013500000000000003317" rpy="-1.570796326794896558 3.4914813388431353274e-15 6.6217083938053274108e-105" />
+<geometry>
+<mesh filename="package://office_mate/description/motor_bracket.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-4.0713796376115173742e-06 -0.012177121574431949008 -0.0047261629959588959821" rpy="0 0 0"/>
+<mass value="0.0084630469105596139306" />
+<inertia ixx="2.8927942991819255597e-06" ixy="6.3752981952633879778e-10"  ixz="-1.2458808671189735512e-10" iyy="7.9629434849240485761e-07" iyz="5.5267826027688928448e-07" izz="2.9001914023676713086e-06" />
+</inertial>
+</link>
+
+<link name="dc_motor_2">
+<visual>
+<origin xyz="-1.084202172485504434e-19 0.0085000000000100030262 -9.9920072216264088638e-15" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/dc_motor.stl"/>
+</geometry>
+<material name="dc_motor_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-1.084202172485504434e-19 0.0085000000000100030262 -9.9920072216264088638e-15" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/dc_motor.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="1.1702285396423018978e-05 0.0084346555184144841877 -0.027179996226653398844" rpy="0 0 0"/>
+<mass value="0.096000000000000015876" />
+<inertia ixx="3.1172642216988409689e-05" ixy="2.0079069750654133337e-08"  ixz="3.1478378843400612317e-08" iyy="3.1065300521791501672e-05" iyz="-1.8154048411485931386e-07" izz="7.041773449468090525e-06" />
+</inertial>
+</link>
+
+<link name="wheel_2">
+<visual>
+<origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/wheel.stl"/>
+</geometry>
+<material name="wheel_material">
+<color rgba="0.50196078431372548323 0.50196078431372548323 0.50196078431372548323 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/wheel.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="7.9659079677543483088e-07 3.0513857657863314151e-08 -0.0025284034607947767151" rpy="0 0 0"/>
+<mass value="0.014968548144000006286" />
+<inertia ixx="8.6077439441117286581e-06" ixy="-2.3149305744626941308e-12"  ixz="1.0674848956514447684e-11" iyy="8.6048259472699125219e-06" iyz="-1.1376260598392653348e-12" izz="1.7005905067567777145e-05" />
+</inertial>
+</link>
+
+<joint name="left_wheel" type="continuous">
+<origin xyz="-1.084202172485504434e-19 0.0085000000000100030262 0.015000000000000013323" rpy="-3.4914813388431357219e-15 1.2190441939489850693e-29 -1.570796326794896558" />
+<parent link="dc_motor_2" />
+<child link="wheel_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_left_motor" type="fixed">
+<origin xyz="-1.2468324983583300991e-17 0.0043499999999999927613 -0.022999999999999999611" rpy="1.570796326794896558 -3.4914813388431353274e-15 3.1415926535897895633" />
+<parent link="motor_bracket_2" />
+<child link="dc_motor_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_left_bracket" type="fixed">
+<origin xyz="0.15359999999999998654 0.00060508128685702483075 0.0080000000000000019013" rpy="3.141592653589793116 5.1885812976927455838e-73 1.570796326794896558" />
+<parent link="base" />
+<child link="motor_bracket_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="distance_nut_m3_70mm">
+<visual>
+<origin xyz="0.19305130036318299269 0.22278430483834599229 0.026000000000000023093" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.19305130036318299269 0.22278430483834599229 0.026000000000000023093" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.0269562977782697999e-15 3.6829282847797462738e-16 -0.034999999999999260869" rpy="0 0 0"/>
+<mass value="0.0066280237756147792477" />
+<inertia ixx="2.7203842094854557908e-06" ixy="0"  ixz="0" iyy="2.7203842094854566378e-06" iyz="3.2973638016105139197e-22" izz="2.788233555227402014e-08" />
+</inertial>
+</link>
+
+<link name="top">
+<visual>
+<origin xyz="0.19505925513389343884 -0.19374999999999992228 0.067799999999999999156" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/coke_can.stl"/>
+</geometry>
+<material name="coke_can_material">
+<color rgba="0.80784313725490197733 0.10588235294117646912 0.10588235294117646912 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.19505925513389343884 -0.19374999999999992228 0.067799999999999999156" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/coke_can.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.29311055549707643042 0.10653430483834605558 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.29311055549707643042 0.10653430483834605558 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.38311055549707639933 0.10653430483834605558 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.38311055549707639933 0.10653430483834605558 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.095059255133893447165 -0.19374999999999992228 0.067799999999999999156" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/coke_can.stl"/>
+</geometry>
+<material name="coke_can_material">
+<color rgba="0.80784313725490197733 0.10588235294117646912 0.10588235294117646912 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.095059255133893447165 -0.19374999999999992228 0.067799999999999999156" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/coke_can.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.24055925513389345149 -0.036300819582330563773 -0.0077899999999999913758" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<geometry>
+<mesh filename="package://office_mate/description/raspberry_pi_4_model_b_(1).stl"/>
+</geometry>
+<material name="raspberry_pi_4_model_b_(1)_material">
+<color rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.24055925513389345149 -0.036300819582330563773 -0.0077899999999999913758" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<geometry>
+<mesh filename="package://office_mate/description/raspberry_pi_4_model_b_(1).stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.14505925513389344994 -0.083749999999999935607 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/top.stl"/>
+</geometry>
+<material name="top_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.14505925513389344994 -0.083749999999999935607 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/top.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.12692378377913665632 0.013750000000000039968 -0.0050000000000000044409" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_distance.stl"/>
+</geometry>
+<material name="camarm_distance_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.12692378377913665632 0.013750000000000039968 -0.0050000000000000044409" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_distance.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0.38311055549707645485 0.17153430483834603004 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.38311055549707645485 0.17153430483834603004 0.021000000000000025591" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.1494156293036301153 -0.13591106250677831291 -0.0071228524991533564981" rpy="0 0 0"/>
+<mass value="1.1046136952433602829" />
+<inertia ixx="0.0084364058010523053366" ixy="-0.00054029044693354379581"  ixz="3.1671277539864668444e-05" iyy="0.0078723668189140446477" iyz="-0.00013853620798837365156" izz="0.013581688273172957959" />
+</inertial>
+</link>
+
+<link name="camarm_base_-_composite">
+<visual>
+<origin xyz="-0.010996149506440094923 0.018135235677378399449 0.0097000000000000002887" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_base_-_composite.stl"/>
+</geometry>
+<material name="camarm_base_-_composite_material">
+<color rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.010996149506440094923 0.018135235677378399449 0.0097000000000000002887" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_base_-_composite.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.013245661928236868166 0.018123765604992292388 0.0049073007228585584574" rpy="0 0 0"/>
+<mass value="0.0068244556008501631311" />
+<inertia ixx="7.1073256034190419503e-07" ixy="1.2934449036690319262e-09"  ixz="1.3192352645016505501e-08" iyy="1.1777445605980622577e-06" iyz="4.2455840575317742466e-11" izz="1.7292603662618425724e-06" />
+</inertial>
+</link>
+
+<link name="camarm_dof1">
+<visual>
+<origin xyz="0.051123291732875997262 -0.10958829154836001452 -0.27807313693041091351" rpy="-1.570796326794896558 5.9953428796796897211e-29 3.6541705043885996685e-53" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_dof1.stl"/>
+</geometry>
+<material name="camarm_dof1_material">
+<color rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.051123291732875997262 -0.10958829154836001452 -0.27807313693041091351" rpy="-1.570796326794896558 5.9953428796796897211e-29 3.6541705043885996685e-53" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_dof1.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0022773219872479211201 -0.0043513671529293029838 -0.017552355010931885992" rpy="0 0 0"/>
+<mass value="0.0060638808957738489849" />
+<inertia ixx="7.1076539408563383857e-07" ixy="-9.9529720186424178127e-08"  ixz="1.0997261342852401382e-07" iyy="4.5729137564926409367e-07" iyz="6.3507336431089969319e-08" izz="5.7676791032060439044e-07" />
+</inertial>
+</link>
+
+<link name="camarm_dof2">
+<visual>
+<origin xyz="0.034575795421546040576 0.24559078401988179707 -0.11621718523324810202" rpy="8.2449635849302900544e-16 -0.010084305792712949107 -3.8520557510975112653e-34" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_dof2.stl"/>
+</geometry>
+<material name="camarm_dof2_material">
+<color rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.034575795421546040576 0.24559078401988179707 -0.11621718523324810202" rpy="8.2449635849302900544e-16 -0.010084305792712949107 -3.8520557510975112653e-34" />
+<geometry>
+<mesh filename="package://office_mate/description/camarm_dof2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0017810483852564451546 0.0062450356673931783913 -0.015392594896296699081" rpy="0 0 0"/>
+<mass value="0.0058014294694281225498" />
+<inertia ixx="5.4736798770675080557e-07" ixy="-2.7234084537520971828e-08"  ixz="3.7153500098034377325e-09" iyy="3.1251076689497814527e-07" iyz="2.5145085457420699588e-08" izz="3.8345996572123426023e-07" />
+</inertial>
+</link>
+
+<link name="imx219">
+<visual>
+<origin xyz="0.0047471802491726167172 0.035499999560675697674 0.10869999999999999107" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/imx219.stl"/>
+</geometry>
+<material name="imx219_material">
+<color rgba="0.30196078431372547213 0.29019607843137257275 0.26274509803921569651 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0047471802491726167172 0.035499999560675697674 0.10869999999999999107" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://office_mate/description/imx219.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0086458080922985937333 0.010499999457022613641 -0.0062022497276096461016" rpy="0 0 0"/>
+<mass value="0.0040000000000000000833" />
+<inertia ixx="2.0392473056225440343e-07" ixy="1.3463065537856105705e-15"  ixz="-3.022028386181775796e-08" iyy="2.255147537367037514e-07" iyz="1.896307781014395694e-15" izz="2.1235384082424955974e-07" />
+</inertial>
+</link>
+
+<joint name="link_cam" type="fixed">
+<origin xyz="0.010199999999999986855 0.018750000000000127676 -0.026400000000107545772" rpy="1.5707963267948961139 1.9675681772430708371e-15 -1.570796326794896558" />
+<parent link="camarm_dof2" />
+<child link="imx219" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="cam_arm_tilt_continuous" type="continuous">
+<origin xyz="0.017691960138132484248 0.0070717989231726119392 -0.032482352910529171952" rpy="-1.570796326794896558 6.1546943232782896156e-29 -9.1528167594712707234e-20" />
+<parent link="camarm_dof1" />
+<child link="camarm_dof2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="0" upper="0"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="cam_arm_pan_continuous" type="continuous">
+<origin xyz="-0.012996149506440096699 0.018135235677378399449 0.011200000000000001621" rpy="3.141592653589793116 -1.7347234759768097907e-18 7.7582627154271159279e-37" />
+<parent link="camarm_base_-_composite" />
+<child link="camarm_dof1" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_cam_arm_base" type="fixed">
+<origin xyz="0.12692425513389343772 0.013750000000000039968 -0.009999999999999995004" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="top" />
+<child link="camarm_base_-_composite" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="distance_nut_m3_70mm_2">
+<visual>
+<origin xyz="0.19305130036318299269 0.22278430483834599229 0.026000000000000030032" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+<material name="distance_nut_m3_70mm_material">
+<color rgba="1 0.82352941176470584317 0.37254901960784314596 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.19305130036318299269 0.22278430483834599229 0.026000000000000030032" rpy="-3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/distance_nut_m3_70mm.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.0269562977782697999e-15 3.6829282847797462738e-16 -0.03499999999999925393" rpy="0 0 0"/>
+<mass value="0.0066280237756147792477" />
+<inertia ixx="2.7203842094854557908e-06" ixy="0"  ixz="0" iyy="2.7203842094854566378e-06" iyz="3.2973638016105139197e-22" izz="2.788233555227402014e-08" />
+</inertial>
+</link>
+
+<link name="lidar_base">
+<visual>
+<origin xyz="0.045000000000000005274 -0.032500000000000008049 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/lidar_base.stl"/>
+</geometry>
+<material name="lidar_base_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.045000000000000005274 -0.032500000000000008049 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/lidar_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.045000000000000005274 -0.032515383326323754609 -0.0015000000000000000312" rpy="0 0 0"/>
+<mass value="0.026051724260384042514" />
+<inertia ixx="1.2171910072355599246e-05" ixy="0"  ixz="0" iyy="2.1625962082370554481e-05" iyz="0" izz="3.3758794568335583465e-05" />
+</inertial>
+</link>
+
+<link name="ld19">
+<visual>
+<origin xyz="0 0.023399953200000000314 0.0066000042000000092024" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ld19.stl"/>
+</geometry>
+<material name="ld19_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0.023399953200000000314 0.0066000042000000092024" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://office_mate/description/ld19.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-5.3908662384178830825e-05 0.023384321784584858467 0.0085766761710235166205" rpy="0 0 0"/>
+<mass value="0.046999999999999993172" />
+<inertia ixx="1.2426951234982873008e-05" ixy="1.4418796247171438037e-08"  ixz="-2.0418088305607210491e-08" iyy="1.2622880433500651898e-05" iyz="-2.1946789308153018279e-08" izz="1.4268566285897476778e-05" />
+</inertial>
+</link>
+
+<joint name="link_lidar" type="fixed">
+<origin xyz="0.045000000000000005274 -0.0091000000000000073885 -0.0065000000000000057732" rpy="3.141592653589793116 -0 0" />
+<parent link="lidar_base" />
+<child link="ld19" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_support_top" type="fixed">
+<origin xyz="1.3877787807814456755e-17 2.7755575615628913511e-17 -0.070000000000000006661" rpy="0 -0 0" />
+<parent link="distance_nut_m3_70mm_2" />
+<child link="lidar_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_middle_support" type="fixed">
+<origin xyz="0.10005925513389343773 -0.051249999999999962252 -0.0050000000000000044409" rpy="0 -0 0" />
+<parent link="top" />
+<child link="distance_nut_m3_70mm_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_support_middle" type="fixed">
+<origin xyz="0 0 -0.070000000000000006661" rpy="0 -0 0" />
+<parent link="distance_nut_m3_70mm" />
+<child link="top" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link_base_support" type="fixed">
+<origin xyz="-0.14505925513389356096 -0.083144918713142945688 0.0080000000000000001665" rpy="3.141592653589793116 -0 0" />
+<parent link="base" />
+<child link="distance_nut_m3_70mm" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>

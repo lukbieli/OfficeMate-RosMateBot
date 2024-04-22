@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "b3d8a7e925754b2a58603c16",
+    "documentMicroversion": "46e5239c6acdbdd83a9ce7d6",
+    "elementId": "6a41d89aa56d23845a2be81c",
+    "fullConfiguration": "default",
+    "id": "MqNVuK5OScmYiuhZR",
+    "isStandardContent": false,
+    "name": "CamArm_distance <1>",
+    "partId": "JID",
+    "suppressed": false,
+    "type": "Part"
+}

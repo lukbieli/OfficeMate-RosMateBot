@@ -1,0 +1,7 @@
+{
+    "documentId": "b3d8a7e925754b2a58603c16",
+    "outputFormat": "urdf",
+    "packageName": "office_mate/description",
+    "robotName": "OfficeMate",
+    "assemblyName": "MateBot"
+}
