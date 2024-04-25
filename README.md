@@ -8,13 +8,16 @@ Repository for package containing OfficeMate robot description and launch files
    ```
    echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
    ```
-2. Install gazebo:
+2. Install dependencies:
   ```
   sudo apt install ros-humble-gazebo-ros-pkgs
+  sudo apt install ros-humble-xacro ros-humble-joint-state-publisher-gui
+  sudo apt install ros-humble-ament-lint-auto
+  sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control
   ```  
 3. Prepare workspace
   ```
-  mkdir dev_ws_office_mate/src
+  mkdir -p dev_ws_office_mate/src
   cd dev_ws_office_mate/src
   ```
 4. Clone repository
