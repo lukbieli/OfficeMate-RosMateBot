@@ -67,11 +67,45 @@ cd src/office_mate/gazebo
 ros2 launch office_mate sim_simple.launch.py world:=<path_to_world_file>
 ```
 
-# Steering robot
-For now, there is only possibility to steer the model manually via teleopt_twist_keyboard package
+# Steering robot with keyboard
+First possibility to steer the model manually is via teleopt_twist_keyboard package
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
 ```
+
+# Steering robot with foglove joistick
+Second one possibility to steer the model manually is via joistick from foxglove.
+## Downlad needed software
+First you need a foxglove studio app. The debian package is avalaible in website:
+```
+https://foxglove.dev/download
+```
+Download it and follow the instrucions there or here.
+Do in location where you downlad it:
+```
+sudo apt install ./foxglove-studio-*.deb
+sudo apt update && sudo apt install foxglove-studio
+```
+Now you need a websocket to connect joystick with ros2.
+Download it:
+```
+sudo apt install ros-humble-foxglove-bridge
+```
+
+## Run the applications
+Anytime you will run foxglove you will need a connection bridge to communicate it with ROS. Do:
+```
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+```
+Open foglove studio app. On the left side are Open Data Sources. Click on Open conection..
+Then chose Foxglove WebSocket, WebSocket URL left with default settings and click open.
+Now click on the user in top right corner and chose "Extensions". Find the Joystick extension and install it.
+In the Joystick panel change Data source from "Subscribed Joy Topic" to "Interactive". Change Publish to on and In display section - display value to Custom Display.
+Now you need a toystic node and translation node to x, z axes. Run:
+```
+ros2 launch office_mate joystick.launch.py
+```
+Now you can steere a robot with joystick.
 
 # Starting Rviz
 There is a lunch file for starting rviz
