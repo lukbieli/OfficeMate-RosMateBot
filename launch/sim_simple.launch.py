@@ -73,11 +73,11 @@ def generate_launch_description():
     #     arguments=["joint_trajectory_cont"],
     # )
 
-    # forward_position_cont_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["forward_position_cont"],
-    # )
+    forward_position_cont_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["forward_position_cont"],
+    )
 
     delayed_diff_drive_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
@@ -101,12 +101,12 @@ def generate_launch_description():
     #     )
     # )
 
-    # delayed_forward_position_cont_spawner = RegisterEventHandler(
-    #     event_handler=OnProcessExit(
-    #         target_action=spawn_entity,
-    #         on_exit=[forward_position_cont_spawner],
-    #     )
-    # )
+    delayed_forward_position_cont_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=spawn_entity,
+            on_exit=[forward_position_cont_spawner],
+        )
+    )
 
 
 
@@ -124,5 +124,5 @@ def generate_launch_description():
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
         # delayed_joint_trajectory_cont_spawner
-        # delayed_forward_position_cont_spawner
+        delayed_forward_position_cont_spawner
     ])

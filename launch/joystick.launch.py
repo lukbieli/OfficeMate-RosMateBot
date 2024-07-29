@@ -22,7 +22,16 @@ def generate_launch_description():
             remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
             )
 
+    joy_teleop = Node(
+        package='joy_teleop', 
+        executable='joy_teleop',
+        name='joy_teleop',
+        parameters=[joy_params],
+        # remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
+    )
+
     return LaunchDescription([
-        # joy_node
-        teleop_node
+        joy_node,
+        # teleop_node,
+        joy_teleop
     ])
