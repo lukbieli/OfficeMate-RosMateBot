@@ -13,7 +13,7 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
 
     forward_position_cont:
-      type: forward_command_controller/ForwardCommandController
+      type: position_controllers/JointGroupPositionController
 
 diff_cont:
   ros__parameters:
