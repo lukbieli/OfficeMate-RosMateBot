@@ -13,7 +13,7 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
 
     forward_position_cont:
-      type: forward_command_controller/ForwardCommandController
+      type: position_controllers/JointGroupPositionController
 
 diff_cont:
   ros__parameters:
@@ -48,21 +48,23 @@ diff_cont:
     # angular.z.max_jerk: 0.0
     # angular.z.min_jerk: 0.0
 
-joint_trajectory_cont:
-  ros__parameters:
-    joints:
-      - cam_arm_pan_continuous
-      - cam_arm_tilt_continuous
-    interface_name: position
-    command_interfaces:
-      - position
-    state_interfaces:
-      - position
-      - velocity
+# joint_trajectory_cont:
+#   ros__parameters:
+  
+#     joints:
+#       - cam_arm_pan_continuous
+#       - cam_arm_tilt_continuous
+#     interface_name: position
+#     command_interfaces:
+#       - position
+#     state_interfaces:
+#       - position
+#       - velocity
 
 forward_position_cont:
   ros__parameters:
+    base_frame_id: base_link
     joints:
-      - cam_arm_pan_continuous
-      - cam_arm_tilt_continuous
+      - camera_pan_joint
+      - camera_tilt_joint
     interface_name: position

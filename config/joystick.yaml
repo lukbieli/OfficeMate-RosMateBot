@@ -21,6 +21,59 @@ teleop_node:
     scale_angular_turbo:
       yaw: 1.0
 
-    require_enable_button: false
+    require_enable_button: true
     enable_button: 6  # Left shoulder button
-    enable_turbo_button: 7  # Right shoulder button
+    enable_turbo_button: 4  # Y button
+
+joy_teleop:
+  ros__parameters:
+    array:
+      type: topic
+      interface_type: std_msgs/msg/Float64MultiArray 
+      topic_name: /forward_position_cont/commands
+      # deadman_buttons: [7] # right shoulder
+      deadman_buttons: [6] # left shoulder
+      # message_value:
+      #   data:
+      #     value: [1.0,3.0]
+      axis_mappings:
+        # data:
+          # - {axis: 0, scale: 1.0, offset: 0.0}
+          # - {axis: 1, scale: 1.0, offset: 0.0}
+        data:
+          index: 0
+          axis: 2
+          scale: 3.14
+          offset: 0.0
+        data-:
+          index: 1
+          axis: 3
+          scale: -3.14
+          offset: 0.0
+        # data2:
+        #   axis: 1
+        #   scale: 1
+        #   offset: 0
+    # walk:
+    #   type: topic
+    #   interface_type: geometry_msgs/msg/TwistStamped
+    #   topic_name: cmd_vel
+    #   deadman_buttons: [4]
+    #   axis_mappings:
+    #     linear-x:
+    #       axis: 1
+    #       scale: 0.5
+    #       offset: -0.03
+    #     # angular-z:
+    #     #   axis: 0
+    #     #   scale: 0.5
+    #     #   offset: 0
+    #     linear-y:
+    #       axis: 2
+    #       scale: 0.3
+    #       offset: 0
+    #     linear-z:
+    #       button: 2
+    #       scale: 3.0
+    #     header-frame_id:
+    #       value: 'my_tf_frame'
