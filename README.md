@@ -71,6 +71,12 @@ source install/setup.bash
 cd src/office_mate/gazebo
 ros2 launch office_mate sim_simple.launch.py world:=<path_to_world_file>
 ```
+Launch with joystick steering and model of a kitchen
+```
+source install/setup.bash
+cd src/office_mate/gazebo
+ros2 launch office_mate sim_simple_full.launch.py world:=<path_to_world_file>
+```
 
 # Steering
 ## Steering robot with joystick
