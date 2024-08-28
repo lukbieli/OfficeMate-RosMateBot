@@ -27,6 +27,12 @@ def generate_launch_description():
                 )])
     )
     
+    joystick = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','joystick.launch.py'
+                )])
+    )
+    
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
 
     # Add this code snippet before launching Gazebo
@@ -117,7 +123,7 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation (Gazebo) clock if true'),
         rsp,
-        # joystick,
+        joystick, # comment to disable joystick 
         # twist_mux,
         gazebo,
         spawn_entity,

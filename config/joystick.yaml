@@ -31,7 +31,8 @@ joy_teleop:
       type: topic
       interface_type: std_msgs/msg/Float64MultiArray 
       topic_name: /forward_position_cont/commands
-      deadman_buttons: [7] # right shoulder
+      # deadman_buttons: [7] # right shoulder
+      deadman_buttons: [6] # left shoulder
       # message_value:
       #   data:
       #     value: [1.0,3.0]

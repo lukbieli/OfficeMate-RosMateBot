@@ -14,15 +14,17 @@ Repository for package containing OfficeMate robot description and launch files
   sudo apt install ros-humble-xacro ros-humble-joint-state-publisher-gui
   sudo apt install ros-humble-ament-lint-auto
   sudo apt install ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros2-control
+  sudo apt install ros-humble-foxglove-bridge
   ```  
 3. Prepare workspace
   ```
   mkdir -p dev_ws_office_mate/src
   cd dev_ws_office_mate/src
   ```
-4. Clone repository
+4. Clone repositories
   ```
   git clone <link_to_repo> 
+  git clone https://github.com/lukbieli/teleop_tools.git
   ```
 5. Rename folder to office_mate (**Important!**)
   ```
@@ -70,15 +72,21 @@ cd src/office_mate/gazebo
 ros2 launch office_mate sim_simple.launch.py world:=<path_to_world_file>
 ```
 
-# Steering robot with keyboard
+# Steering
+## Steering robot with joystick
+That's option enabled by default in sim_simple.launch.py file by calling joystick launch. To disable it comment out joystick in last return.
+
+## Steering robot with keyboard
 First possibility to steer the model manually is via teleopt_twist_keyboard package
 ```
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
 ```
 
-# Steering robot with foglove joistick
+
+
+## Steering robot with foxglove joistick
 Second one possibility to steer the model manually is via joistick from foxglove.
-## Downlad needed software
+### Downlad needed software
 First you need a foxglove studio app. The debian package is avalaible in website:
 ```
 https://foxglove.dev/download
@@ -95,7 +103,7 @@ Download it:
 sudo apt install ros-humble-foxglove-bridge
 ```
 
-## Run the applications
+### Run the applications
 Anytime you will run foxglove you will need a connection bridge to communicate it with ROS. Do:
 ```
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml

@@ -26,8 +26,7 @@ def generate_launch_description():
         package='joy_teleop', 
         executable='joy_teleop',
         name='joy_teleop',
-        parameters=[joy_params],
-        # remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
+        parameters=[joy_params]
     )
 
     return LaunchDescription([
