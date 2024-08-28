@@ -129,7 +129,7 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation (Gazebo) clock if true'),
         rsp,
-        # joystick, # comment to disable joystick 
+        joystick, # comment to disable joystick 
         # twist_mux,
         gazebo,
         spawn_entity,
@@ -137,5 +137,5 @@ def generate_launch_description():
         delayed_joint_broad_spawner,
         # delayed_joint_trajectory_cont_spawner
         delayed_forward_position_cont_spawner,
-        # foxglove
+        foxglove
     ])
