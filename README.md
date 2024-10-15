@@ -131,3 +131,111 @@ source install/setup.bash
 ros2 launch office_mate start_rviz.launch.py
 
 ```
+
+# Setting up SLAM for mapping
+## Installation
+First things first, let's install slam_toolbox.
+For Humble run following:
+```
+sudo apt install ros-humble-slam-toolbox
+```
+For Foxy:
+```
+sudo apt install ros-foxy-slam-toolbox
+```
+## Getting .yaml parameters file
+Now we need to copy mapping parameters file to use on our robot:
+```
+cp /opt/ros/humble/share/slam_toolbox/config/mapper_params_online_async.yaml [name_of_your_workspace]/src/office_mate/config/
+```
+Build package with colcon in case anything changed:
+```
+colcon build --symlink-install
+```
+## Launching
+Now it's time to launch our slam_toolbox and see how mapping works:
+```
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=src/office_mate/config/mapper_params_online_async.yaml use_sim_time:=true
+```
+*Note: in Foxy version instead of "slam_params_file" use "params_file"
+
+Now we can launch Gazebo and Rviz.
+# Setting up Rviz to use slam_toolbox
+In Rviz bottom-left corner add a Map and set topic to "/map" and change Fixed Frame to "map". That's all, mapping should start creating a scan of a map
+
+## Saving created map
+To save scanned map and reuse it in the future, on the top side of the Rviz window click Panels > Add New Panel and select SlamToolBoxPlugin.
+Next to Save Map and Serialize Map give a name for your saved files and click on the save buttons. (Note: give a different name to these files. Example: name_save, name_serialize) 
+We only care about Serialize Map, but it won't hurt to save both.
+
+*Note: you can find premade map of simulated 3D enviroment in folder "Premade Map"
+# Reusing saved map
+In /config/ folder open mapper_params_online_async.yaml file and search for "mode" which should be located at line 18 and change parameter from "mapping" to "localization". And just a few lines down, uncomment line 23: map_file_name and provide a path to your saved map which has extension ".data", in my example it would be:
+```
+/home/internalprojects/dev_ws_office_mate/scanned_map_serial
+```
+Note: in this case you don't need to provide extension of the file
+
+For a last step in changing parameters is to uncomment line 25: 
+```
+map_start_at_dock: true
+```
+## Rviz localization with slam_toolbox
+To see our saved map, simply start Gazebo, Rviz and Slam_toolbox. For slam_toolbox localization we will use slightly different command:
+```
+ros2 launch slam_toolbox localization_launch.py slam_params_file:=src/office_mate/config/mapper_params_online_async.yaml use_sim_time:=true
+```
+In Rviz as previously, in the bottom-left corner add a Map with "/map" topic and Fixed Frame: map.
+# Setting up Nav2
+## Installation
+Installing Nav2 and other necessary packages we may need in the future:
+```
+sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-turtlebot3
+```
+Next package we gonna need is Twist Mux:
+```
+sudo apt install ros-humble-twist-mux
+```
+## New node
+To implement movements of autonomous driving we will need to create a new node called "twist_mux.yaml" and locate it in our /config/ folder with following code:
+```
+twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        topic   : cmd_vel
+        timeout : 0.5
+        priority: 10
+      joystick:
+        topic   : cmd_vel_joy
+        timeout : 0.5
+        priority: 100
+```
+Next we need to run twist_mux and remap the output topic:
+```
+ros2 run twist_mux twist_mux --ros-args --params-file ./src/office_mate/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+```
+Moving to modifying our joystick.launch.py script. Find a 'teleop_node' and here we need to modify "remappings" field to:
+```
+remappings=[('/cmd_vel', '/cmd_vel_joy')]
+```
+Okay, we all set up!
+
+Let's go ahead and launch our standard apps Gazebo, Rviz with all the settings from previous sections, and run slam_toolbox (same command as in Rviz localization with slam_toolbox section)
+
+# Setting up Nav2 in Rviz
+First lets run nav2_bringup:
+```
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+```
+Now we can add a new Map from bottom-left section and subscribe to /global_costmap/costmap topic. For better visualisation we can change Color Scheme to "costmap".
+
+## Sending robot for a journey!
+In the top section of Rviz you will find a button called "2D Goal Pose", click on it and choose a destination on the map.
+
+*Note: don't forget to change Fixed Frame to "map", otherwise robot might get stuck and abort his given commands!
+
+# References
+If you need more description with video representation of all above steps, please follow these links:
+SLAM_TOOLBOX: https://www.youtube.com/watch?v=ZaiA3hWaRzE
+NAV2: https://www.youtube.com/watch?v=jkoGkAd0GYk
