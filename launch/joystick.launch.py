@@ -20,6 +20,7 @@ def generate_launch_description():
             name = 'teleop_node',
             parameters=[joy_params],
             remappings=[('/cmd_vel', '/cmd_vel_joy')]
+            # remappings=[('/cmd_vel', 'diff_cont/cmd_vel_unstamped')]
             )
 
     joy_teleop = Node(
