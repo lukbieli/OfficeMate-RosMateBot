@@ -10,8 +10,10 @@ from launch.launch_description_sources import AnyLaunchDescriptionSource
 from launch.actions import RegisterEventHandler
 from launch.event_handlers import OnProcessExit
 from launch.actions import DeclareLaunchArgument
+from launch.substitutions import PathJoinSubstitution, TextSubstitution
 
 from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
@@ -27,6 +29,15 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','office_mate_simple.launch.py'
                 )])
     )
+
+    #ros2 run twist_mux twist_mux --ros-args --params-file ./src/office_mate/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+    twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
+    twist_mux = Node(
+            package="twist_mux",
+            executable="twist_mux",
+            parameters=[twist_mux_params, {'use_sim_time': True}],
+            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+        )
     
     joystick = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -120,6 +131,28 @@ def generate_launch_description():
         )
     )
 
+    # ros2 launch slam_toolbox online_async_launch.py slam_params_file:=src/office_mate/config/mapper_params_online_async.yaml use_sim_time:=true
+
+    
+    slam_params_file = os.path.join(get_package_share_directory("office_mate"),
+                                       'config', 'localizer_params_online_async.yaml')
+    start_async_slam_toolbox_node = Node(
+        parameters=[
+          slam_params_file,
+        #   {'use_sim_time': use_sim_time}
+        ],
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen')
+
+    # ros2 launch office_mate nav2_navigation_launch.py
+
+    nav2 = IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory(package_name),'launch','nav2_navigation_launch.py'
+            )])
+    )
 
 
     # Launch them all!
@@ -130,12 +163,14 @@ def generate_launch_description():
             description='Use simulation (Gazebo) clock if true'),
         rsp,
         joystick, # comment to disable joystick 
-        # twist_mux,
+        twist_mux,
         gazebo,
         spawn_entity,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
         # delayed_joint_trajectory_cont_spawner
         delayed_forward_position_cont_spawner,
-        foxglove
+        foxglove,
+        start_async_slam_toolbox_node,
+        nav2
     ])
