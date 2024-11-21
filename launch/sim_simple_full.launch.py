@@ -27,7 +27,7 @@ def generate_launch_description():
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','office_mate_simple.launch.py'
-                )])
+                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
     )
 
     #ros2 run twist_mux twist_mux --ros-args --params-file ./src/office_mate/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
