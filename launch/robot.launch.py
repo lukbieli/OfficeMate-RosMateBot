@@ -14,24 +14,14 @@ import xacro
 
 def generate_launch_description():
 
-    # Check if we're told to use sim time
-    # use_sim_time = LaunchConfiguration('use_sim_time')
-    # use_ros2_control = LaunchConfiguration('use_ros2_control')
 
-    # Process the URDF file
-    pkg_path = os.path.join(get_package_share_directory('office_mate'))
-    xacro_file = os.path.join(pkg_path,'description_simple','robot.urdf.xacro')
-    # robot_description_config = xacro.process_file(xacro_file).toxml()
-    # robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=', use_ros2_control, ' sim_mode:=', use_sim_time])
-    
+    package_name='office_mate' #<--- CHANGE ME
+
     # Robot State Publisher
-    robot_state_publisher_node = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        name='robot_state_publisher',
-        # emulate_tty=True,
-        parameters=[{'use_sim_time': False, 'robot_description': Command(['xacro ', xacro_file])}],
-        output="screen"
+    robot_state_publisher_node = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','office_mate_simple.launch.py'
+                )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
     
     package_name='ldlidar_node' #<--- CHANGE ME
@@ -42,9 +32,15 @@ def generate_launch_description():
                 )])
     )
 
+    rpi_params = Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            parameters=["0", "0", "0.15", "0", "0", "0", "base_link", "ldlidar_base"]
+        )
 
     # Launch!
     return LaunchDescription([
         robot_state_publisher_node,
-        lidar
+        lidar,
+        rpi_params
     ])
